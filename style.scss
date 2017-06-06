@@ -30,6 +30,13 @@
     font-style: normal;
 }
 
+//--------------------colors---------------------
+$orange: #fce38a;
+$grey: #b3b3b3;
+$red: #f38181;
+$green: #95e1d3;
+$lightgrey: #e5e5e5;
+
 //--------------------GLOBAL---------------------
 
 * {
@@ -38,6 +45,7 @@
 
 body {
   font-family: 'montserratregular';
+  overflow-x: hidden;
 }
 
 a {
@@ -52,15 +60,9 @@ a {
    width: 100%;
  }
 
- a.navbar-brand {
-   display: block;
-   float: none;
- }
-
 li {
   a {
     text-transform: uppercase;
-    margin-bottom: 50px;
   }
 /*  img {
     transform: translateY(-4px);
@@ -68,21 +70,26 @@ li {
 */
 }
 
-#overnavbar a {
+.navbar-toggle {
+  border-color: white;
+  .icon-bar {
+    background-color: white;
+  }
   &:hover {
-    color: orange;
-    background-color: inherit ;
-    padding-bottom: 2px;
-    &::after {
-      content: "";
-      background-color: orange;
-      height: 3px;
-      display: block;
-      margin: 10px auto 0;
+    border-color: $orange;
+    .icon-bar {
+      background-color: $orange;
     }
   }
+}
+
+#overnavbar a {
+  &:hover {
+    color: $orange;
+    background-color: inherit ;
+  }
   &:focus {
-    color: orange;
+    color: $orange;
     background-color: inherit ;
   }
 }
@@ -92,28 +99,28 @@ li {
   font-size: 24px;
 }
 
-//--------------------HEADER-----------------------
+//--------------------HEADER (banner)-----------------------
 header {
   background-image: linear-gradient(rgba(243,129,129,0.9),rgba(252,227,138,0.9)), url("images/banner/vulture.jpg");
+  background-position: center top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   text-align: center;
   color: white;
   width: 100%;
-  height: 1000px;
 }
 
-section {
+.welcome {
   h2 {
     font-family: 'kaushan_scriptregular';
-    font-size: 80px;
-    margin-top: 150px;
+    font-size: 16px;
+    margin-top: 15px;
   }
 
   h1 {
     font-family: 'montserratbold';
-    font-size: 160px;
-    width: 50%;
+    font-size: 40px;
+    max-width: 280px;
     margin: auto;
   }
 
@@ -123,17 +130,345 @@ section {
     width: 50px;
     height: 3px;
     display: block;
-    margin: 30px auto 70px;
+    margin: 10px auto 40px;
   }
 
   a {
-    margin-top: 40px;
     border: white solid 3px;
     padding: 10px 30px;
     &:hover {
-      border: orange solid 3px;
-      color: orange;
+      border: $orange solid 3px;
+      color: $orange;
       text-decoration: none;
+    }
+  }
+
+  .timer {
+    height: 200px;
+  }
+}
+
+//-----------------------(about us)-------------------------
+article {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.image-container {
+  position: relative;
+  margin-bottom: 15px;
+  img {
+    margin:auto;
+  }
+  .after {
+    font-family: 'montserratbold';
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    p {
+      position: absolute;
+      top: 53%;
+      left: calc(50% - 47px);
+    }
+  }
+  &:hover .after{
+    display: block;
+    background: url('images/about us/users.png') no-repeat center center, linear-gradient(rgba(243,129,129,0.8),rgba(252,227,138,0.8));
+    background-position: center top 47%;
+  }
+}
+
+h4 {
+  font-family: 'kaushan_scriptregular';
+}
+
+h3 {
+  font-family: 'montserratbold';
+}
+
+h3::after {
+  content: "";
+  background-color: $red;
+  width: 50px;
+  height: 3px;
+  display: block;
+  margin: 30px auto 40px;
+}
+
+.about {
+  color: $grey;
+  margin-bottom: 80px;
+}
+
+//-----------------------(facts)----------------------------
+.facts {
+  background-color: $green;
+}
+
+.fact {
+  text-align: center;
+  width: 100%;
+  &:not(:first-child) {
+    border-top: 1px white solid;
+  }
+  p {
+    font-size: 11px;
+    color: white;
+    text-transform: uppercase;
+    padding: 60px 0;
+  }
+  span {
+    display: block;
+    font-family: 'montserratbold';
+    font-size: 60px;
+  }
+}
+
+//-----------------------(service)--------------------------
+.service {
+  .row {
+    &:not(:first-child) {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: $lightgrey 2px solid;
+    }
+  }
+
+  img {
+    float: left;
+  }
+
+  .text {
+    text-align: left;
+    padding-left: 50px;
+  }
+
+  h6 {
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+  }
+
+  p {
+    text-align: justify;
+    color: $grey;
+    font-size: 12px;
+  }
+}
+
+//-----------------------(feature)--------------------------
+.feature {
+  padding-top: 70px;
+  background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url("images/feature/feature.jpg");
+  margin-bottom: 100px;
+}
+
+.mobile {
+  max-width: 100%;
+  transform: translate(0,51px);
+}
+
+//-----------------------(service 2)------------------------
+.wedothis {
+  color: $grey;
+  margin-bottom: 80px;
+}
+
+.photography {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.panel-group {
+  height: 200px;
+
+  a {
+    display: flex;
+    text-decoration: none;
+  }
+
+  img {
+    text-align: left;
+    padding: 12px;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-family: 'montserratbold';
+    text-align: left;
+    height: 44px;
+    width: 80%;
+    padding: 20px;
+  }
+
+  .glyphicon {
+    color: $grey;
+    padding-top: 16px;
+    font-size: 20px;
+    font-weight: bold;
+
+  }
+  .panel-body {
+    font-style: italic;
+    text-align: justify;
+    color: $grey;
+    line-height: 1.7em;
+    height: 120px;
+    overflow-y: scroll;
+  }
+
+  .panel {
+    border-radius: 0;
+  }
+
+  .panel-collapse {
+    border-top: 1px $lightgrey solid;
+  }
+}
+
+
+//-----------------------(quote)----------------------------
+//-----------------------(our team)-------------------------
+//-----------------------(logos)----------------------------
+//-----------------------(work)-----------------------------
+//-----------------------(testimonial)----------------------
+//-----------------------(what people say)------------------
+//-----------------------(blog)-----------------------------
+//-----------------------(map)------------------------------
+//-----------------------(footer)---------------------------
+
+//-----------------------responsive-------------------------
+//-----------------------BIGGER ON MOBILE-------------------
+@media only screen and (min-width: 430px) {
+  .welcome {
+    h2 {
+      font-size: 24px;
+    }
+    h1 {
+      font-size: 50px;
+      max-width: 340px;
+    }
+  }
+
+  .image-container {
+    .after {
+      left: calc((100% - 380px) /2);
+      width: calc(100% - (100% - 380px));
+    }
+    &:hover .after{
+      box-shadow: 10px 10px 0px $green;
+    }
+    &:hover {
+      transform: translate(-10px, -10px);
+      transition: 0.1s;
+    }
+  }
+}
+
+//-----------------------TABLETS----------------------------
+@media only screen and (min-width: 600px) {
+  .welcome {
+    h2 {
+      font-size: 30px;
+    }
+    h1 {
+      font-size: 60px;
+      max-width: 400px;
+    }
+  }
+}
+
+//-----------------------DESKTOP----------------------------
+@media only screen and (min-width: 768px) {
+  .welcome {
+    h2 {
+      font-size: 40px;
+    }
+    h1 {
+      font-size: 100px;
+      max-width: 600px;
+    }
+  }
+
+  li a {
+      margin-bottom: 50px;
+  }
+  #overnavbar a {
+    &:hover {
+      color: $orange;
+      background-color: inherit ;
+      padding-bottom: 2px;
+      &::after {
+        content: "";
+        background-color: $orange;
+        height: 3px;
+        display: block;
+        margin: 10px auto 0;
+        width: 100%;
+      }
+    }
+  }
+  .welcome h1::after {
+      margin: 20px auto 60px;
+    }
+
+  .image-container {
+    .after {
+      left: 15px;
+      width: calc(100% - 30px);
+    }
+  }
+
+  .facts {
+    .fact {
+      float: left;
+      width: 20%;
+      border-top: 0px;
+      &:not(:first-child) {
+        border-left: 1px white solid;
+      }
+    }
+  }
+
+  .mobile {
+    transform: translate(30px,51px);
+  }
+}
+
+//-----------------------HI RES----------------------------
+@media only screen and (min-width: 960px) {
+  .welcome {
+    h2 {
+      font-size: 60px;
+      margin-top: 40px;
+    }
+    h1 {
+      font-size: 120px;
+      max-width: 600px;
+    }
+  }
+}
+
+//-----------------------HIGHEST RESOLUTION-----------------
+@media only screen and (min-width: 1200px) {
+  .welcome {
+    h2 {
+      font-size: 80px;
+      margin-top: 80px;
+    }
+    h1 {
+      font-size: 140px;
+      max-width: 800px;
+    }
+  }
+
+  .panel-group {
+    .panel-body {
+      height: 185px;
     }
   }
 }
