@@ -79,13 +79,13 @@ header {
   font-size: 40px;
   max-width: 280px;
   margin: auto; }
-.welcome h1::after {
-  content: "";
-  background-color: white;
-  width: 50px;
-  height: 3px;
-  display: block;
-  margin: 10px auto 40px; }
+  .welcome h1::after {
+    content: "";
+    background-color: white;
+    width: 50px;
+    height: 3px;
+    display: block;
+    margin: 10px auto 40px; }
 .welcome a {
   border: white solid 3px;
   padding: 10px 30px; }
@@ -129,16 +129,15 @@ h4 {
 
 h3 {
   font-family: 'montserratbold'; }
+  h3::after {
+    content: "";
+    background-color: #f38181;
+    width: 50px;
+    height: 3px;
+    display: block;
+    margin: 30px auto 40px; }
 
-h3::after {
-  content: "";
-  background-color: #f38181;
-  width: 50px;
-  height: 3px;
-  display: block;
-  margin: 30px auto 40px; }
-
-.about {
+.grey {
   color: #b3b3b3;
   margin-bottom: 80px; }
 
@@ -186,16 +185,13 @@ h3::after {
   max-width: 100%;
   transform: translate(0, 51px); }
 
-.wedothis {
-  color: #b3b3b3;
-  margin-bottom: 80px; }
-
 .photography {
   margin: auto;
   margin-bottom: 20px; }
 
 .panel-group {
-  height: 200px; }
+  height: 200px;
+  margin-bottom: 50px; }
   .panel-group a {
     display: flex;
     text-decoration: none; }
@@ -226,6 +222,154 @@ h3::after {
   .panel-group .panel-collapse {
     border-top: 1px #e5e5e5 solid; }
 
+.quote {
+  background-color: #f8f8f8;
+  padding-top: 50px;
+  padding-bottom: 40px; }
+  .quote img {
+    display: none;
+    padding: 20px;
+    border: 3px #95e1d3 solid;
+    float: left; }
+  .quote .text {
+    margin-left: 50px;
+    margin-right: 50px; }
+    .quote .text p {
+      color: #b3b3b3;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 100; }
+    .quote .text h6 {
+      font-size: 20px;
+      font-family: 'kaushan_scriptregular';
+      font-weight: 600; }
+      .quote .text h6::before {
+        content: "";
+        background-color: #f38181;
+        width: 50px;
+        height: 3px;
+        float: left;
+        margin: 10px 10px 0 0; }
+  .quote .glyphicon {
+    color: #b3b3b3;
+    font-size: 20px;
+    padding-top: 40px;
+    text-decoration: none; }
+
+.glyphicon-chevron-left {
+  float: left;
+  padding-right: 30px; }
+
+.glyphicon-chevron-right {
+  float: right;
+  padding-left: 10px; }
+
+.our {
+  font-family: 'robotoregular';
+  color: #b3b3b3;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 80%; }
+
+.after img {
+  margin-top: 210px;
+  padding-left: 1px; }
+  .after img:hover {
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(180deg); }
+
+.ourteam .image-container:hover .after {
+  display: block;
+  background: linear-gradient(rgba(243, 129, 129, 0.8), rgba(252, 227, 138, 0.8));
+  background-position: center top 47%; }
+
+.author {
+  font-family: 'montserratbold';
+  text-transform: uppercase; }
+
+.job {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 100;
+  color: #b3b3b3; }
+
+.logos {
+  background-color: #f8f8f8;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .logos .col-sm-2 {
+    text-align: center; }
+
+.work {
+  margin-bottom: 0; }
+  .work .grey, .work .roboto {
+    font-family: 'robotoregular'; }
+  .work .roboto {
+    font-style: italic; }
+
+.images {
+  max-width: 1920px;
+  margin: auto; }
+  .images .col-sm-3 {
+    padding: 0; }
+
+.work-container {
+  position: relative; }
+  .work-container img {
+    margin: auto; }
+  .work-container .after {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; }
+    .work-container .after p {
+      line-height: 2em;
+      position: absolute;
+      top: 53%;
+      left: calc(50% - 76px); }
+  .work-container:hover .after {
+    display: block;
+    background: url("images/work/picture.png") no-repeat center center, linear-gradient(rgba(243, 129, 129, 0.8), rgba(252, 227, 138, 0.8));
+    background-position: center top 44%; }
+
+.testimonial {
+  background-color: #f8f8f8;
+  padding-top: 50px;
+  padding-bottom: 40px; }
+  .testimonial img {
+    padding: 20px;
+    float: left; }
+  .testimonial .text {
+    margin-left: 50px;
+    margin-right: 50px; }
+    .testimonial .text p {
+      font-family: 'robotoregular';
+      line-height: 1.8em;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 100;
+      padding-top: 50px;
+      margin: 0; }
+    .testimonial .text h6 {
+      font-size: 20px;
+      font-family: 'kaushan_scriptregular';
+      font-weight: 600; }
+      .testimonial .text h6::before {
+        content: "";
+        background-color: #f38181;
+        width: 50px;
+        height: 3px;
+        float: left;
+        margin: 10px 10px 0 0; }
+  .testimonial .glyphicon {
+    color: #b3b3b3;
+    font-size: 20px;
+    padding-top: 110px;
+    text-decoration: none; }
+
 @media only screen and (min-width: 430px) {
   .welcome h2 {
     font-size: 24px; }
@@ -240,13 +384,22 @@ h3::after {
     box-shadow: 10px 10px 0px #95e1d3; }
   .image-container:hover {
     transform: translate(-10px, -10px);
-    transition: 0.1s; } }
+    transition: 0.1s; }
+
+  .work-container .after {
+    left: calc((100% - 480px) /2);
+    width: calc(100% - (100% - 480px)); } }
 @media only screen and (min-width: 600px) {
   .welcome h2 {
     font-size: 30px; }
   .welcome h1 {
     font-size: 60px;
-    max-width: 400px; } }
+    max-width: 400px; }
+
+  .quote img {
+    display: initial; }
+  .quote .text {
+    margin-left: 200px; } }
 @media only screen and (min-width: 768px) {
   .welcome h2 {
     font-size: 40px; }
@@ -272,9 +425,9 @@ h3::after {
   .welcome h1::after {
     margin: 20px auto 60px; }
 
-  .image-container .after {
-    left: 15px;
-    width: calc(100% - 30px); }
+  .image-container .after, .work-container .after {
+    left: 0;
+    width: 100%; }
 
   .facts .fact {
     float: left;
@@ -284,14 +437,22 @@ h3::after {
       border-left: 1px white solid; }
 
   .mobile {
-    transform: translate(30px, 51px); } }
-@media only screen and (min-width: 960px) {
+    transform: translate(30px, 51px); }
+
+  .after img {
+    margin-top: 120px;
+    height: 45px; } }
+@media only screen and (min-width: 992px) {
   .welcome h2 {
     font-size: 60px;
     margin-top: 40px; }
   .welcome h1 {
     font-size: 120px;
-    max-width: 600px; } }
+    max-width: 600px; }
+
+  .after img {
+    margin-top: 160px;
+    height: initial; } }
 @media only screen and (min-width: 1200px) {
   .welcome h2 {
     font-size: 80px;
@@ -301,6 +462,9 @@ h3::after {
     max-width: 800px; }
 
   .panel-group .panel-body {
-    height: 185px; } }
+    height: 185px; }
+
+  .after img {
+    margin-top: 195px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -36,6 +36,7 @@ $grey: #b3b3b3;
 $red: #f38181;
 $green: #95e1d3;
 $lightgrey: #e5e5e5;
+$almostwhite: #f8f8f8;
 
 //--------------------GLOBAL---------------------
 
@@ -122,15 +123,14 @@ header {
     font-size: 40px;
     max-width: 280px;
     margin: auto;
-  }
-
-  h1::after {
-    content: "";
-    background-color: white;
-    width: 50px;
-    height: 3px;
-    display: block;
-    margin: 10px auto 40px;
+    &::after {
+      content: "";
+      background-color: white;
+      width: 50px;
+      height: 3px;
+      display: block;
+      margin: 10px auto 40px;
+    }
   }
 
   a {
@@ -189,18 +189,17 @@ h4 {
 
 h3 {
   font-family: 'montserratbold';
+  &::after {
+    content: "";
+    background-color: $red;
+    width: 50px;
+    height: 3px;
+    display: block;
+    margin: 30px auto 40px;
+  }
 }
 
-h3::after {
-  content: "";
-  background-color: $red;
-  width: 50px;
-  height: 3px;
-  display: block;
-  margin: 30px auto 40px;
-}
-
-.about {
+.grey {
   color: $grey;
   margin-bottom: 80px;
 }
@@ -273,11 +272,6 @@ h3::after {
 }
 
 //-----------------------(service 2)------------------------
-.wedothis {
-  color: $grey;
-  margin-bottom: 80px;
-}
-
 .photography {
   margin: auto;
   margin-bottom: 20px;
@@ -285,6 +279,7 @@ h3::after {
 
 .panel-group {
   height: 200px;
+  margin-bottom: 50px;
 
   a {
     display: flex;
@@ -330,12 +325,209 @@ h3::after {
   }
 }
 
-
 //-----------------------(quote)----------------------------
+.quote {
+  background-color: $almostwhite;
+  padding-top: 50px;
+  padding-bottom: 40px;
+
+  img {
+    display: none;
+    padding: 20px;
+    border: 3px $green solid;
+    float: left;
+  }
+
+  .text {
+    margin-left: 50px;
+    margin-right: 50px;
+    p {
+      color: $grey;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 100;
+    }
+    h6 {
+      font-size: 20px;
+      font-family: 'kaushan_scriptregular';
+      font-weight: 600;
+      &::before {
+        content: "";
+        background-color: $red;
+        width: 50px;
+        height: 3px;
+        float: left;
+        margin: 10px 10px 0 0;
+      }
+    }
+  }
+
+  .glyphicon {
+    color: $grey;
+    font-size: 20px;
+    padding-top: 40px;
+    text-decoration: none;
+  }
+}
+
+.glyphicon-chevron-left {
+  float: left;
+  padding-right: 30px;
+}
+
+.glyphicon-chevron-right {
+  float: right;
+  padding-left: 10px;
+}
+
 //-----------------------(our team)-------------------------
+.our {
+  font-family: 'robotoregular';
+  color: $grey;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 80%;
+}
+
+.after {
+  img {
+    margin-top: 210px;
+    padding-left: 1px;
+    &:hover {
+      -webkit-filter: hue-rotate(180deg);
+      filter: hue-rotate(180deg);
+    }
+  }
+
+}
+.ourteam{
+  .image-container {
+      &:hover .after {
+      display: block;
+      background: linear-gradient(rgba(243,129,129,0.8),rgba(252,227,138,0.8));
+      background-position: center top 47%;
+    }
+  }
+}
+
+.author {
+  font-family: 'montserratbold';
+  text-transform: uppercase;
+}
+
+.job {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 100;
+  color: $grey;
+}
+
 //-----------------------(logos)----------------------------
+.logos {
+  background-color: $almostwhite;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .col-sm-2 {
+    text-align: center;
+  }
+}
+
 //-----------------------(work)-----------------------------
+.work {
+  margin-bottom: 0;
+  .grey, .roboto {
+    font-family: 'robotoregular';
+  }
+  .roboto {
+    font-style: italic;
+  }
+}
+
+.images {
+  max-width: 1920px;
+  margin: auto;
+  .col-sm-3 {
+    padding: 0;
+  }
+}
+
+.work-container {
+  position: relative;
+  img {
+    margin:auto;
+  }
+  .after {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    p {
+      line-height: 2em;
+      position: absolute;
+      top: 53%;
+      left: calc(50% - 76px);
+    }
+  }
+  &:hover .after{
+    display: block;
+    background: url('images/work/picture.png') no-repeat center center, linear-gradient(rgba(243,129,129,0.8),rgba(252,227,138,0.8));
+    background-position: center top 44%;
+  }
+}
+
 //-----------------------(testimonial)----------------------
+.testimonial {
+  background-color: $almostwhite;
+  padding-top: 50px;
+  padding-bottom: 40px;
+
+  img {
+    padding: 20px;
+    float: left;
+  }
+
+  .text {
+    margin-left: 50px;
+    margin-right: 50px;
+    p {
+      font-family: 'robotoregular';
+      line-height: 1.8em;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 100;
+      padding-top: 50px;
+      margin: 0;
+    }
+    h6 {
+      font-size: 20px;
+      font-family: 'kaushan_scriptregular';
+      font-weight: 600;
+      &::before {
+        content: "";
+        background-color: $red;
+        width: 50px;
+        height: 3px;
+        float: left;
+        margin: 10px 10px 0 0;
+      }
+    }
+  }
+
+  .glyphicon {
+    color: $grey;
+    font-size: 20px;
+    padding-top: 110px;
+    text-decoration: none;
+  }
+}
+
+
+
+
 //-----------------------(what people say)------------------
 //-----------------------(blog)-----------------------------
 //-----------------------(map)------------------------------
@@ -367,6 +559,13 @@ h3::after {
       transition: 0.1s;
     }
   }
+
+  .work-container {
+    .after {
+      left: calc((100% - 480px) /2);
+      width: calc(100% - (100% - 480px));
+    }
+  }
 }
 
 //-----------------------TABLETS----------------------------
@@ -378,6 +577,15 @@ h3::after {
     h1 {
       font-size: 60px;
       max-width: 400px;
+    }
+  }
+
+  .quote {
+    img {
+      display: initial;
+    }
+    .text {
+      margin-left: 200px;
     }
   }
 }
@@ -416,10 +624,10 @@ h3::after {
       margin: 20px auto 60px;
     }
 
-  .image-container {
+  .image-container, .work-container {
     .after {
-      left: 15px;
-      width: calc(100% - 30px);
+      left: 0;
+      width: 100%;
     }
   }
 
@@ -437,10 +645,17 @@ h3::after {
   .mobile {
     transform: translate(30px,51px);
   }
+
+  .after {
+    img {
+      margin-top: 120px;
+      height: 45px;
+    }
+  }
 }
 
 //-----------------------HI RES----------------------------
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 992px) {
   .welcome {
     h2 {
       font-size: 60px;
@@ -449,6 +664,12 @@ h3::after {
     h1 {
       font-size: 120px;
       max-width: 600px;
+    }
+  }
+  .after {
+    img {
+      margin-top: 160px;
+      height: initial;
     }
   }
 }
@@ -469,6 +690,12 @@ h3::after {
   .panel-group {
     .panel-body {
       height: 185px;
+    }
+  }
+
+  .after {
+    img {
+      margin-top: 195px;
     }
   }
 }
