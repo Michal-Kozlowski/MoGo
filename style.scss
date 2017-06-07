@@ -37,6 +37,7 @@ $red: #f38181;
 $green: #95e1d3;
 $lightgrey: #e5e5e5;
 $almostwhite: #f8f8f8;
+$darkgrey: #999999;
 
 //--------------------GLOBAL---------------------
 
@@ -65,10 +66,6 @@ li {
   a {
     text-transform: uppercase;
   }
-/*  img {
-    transform: translateY(-4px);
-  }
-*/
 }
 
 .navbar-toggle {
@@ -262,7 +259,7 @@ h3 {
 //-----------------------(feature)--------------------------
 .feature {
   padding-top: 70px;
-  background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url("images/feature/feature.jpg");
+  background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url("images/feature/feature.jpg") center center;
   margin-bottom: 100px;
 }
 
@@ -308,6 +305,7 @@ h3 {
 
   }
   .panel-body {
+    font-family: 'robotoregular';
     font-style: italic;
     text-align: justify;
     color: $grey;
@@ -344,6 +342,7 @@ h3 {
     p {
       color: $grey;
       font-size: 20px;
+      font-family: 'robotoregular';
       font-style: italic;
       font-weight: 100;
     }
@@ -416,6 +415,7 @@ h3 {
 }
 
 .job {
+  font-family: 'robotoregular';
   font-size: 12px;
   font-style: italic;
   font-weight: 100;
@@ -482,11 +482,11 @@ h3 {
 //-----------------------(testimonial)----------------------
 .testimonial {
   background-color: $almostwhite;
-  padding-top: 50px;
   padding-bottom: 40px;
 
   img {
     padding: 20px;
+    display: none;
     float: left;
   }
 
@@ -525,13 +525,256 @@ h3 {
   }
 }
 
-
-
-
 //-----------------------(what people say)------------------
+.say {
+  background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url("images/what people say/tabolerone.jpg") top center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin-top: 0;
+  margin-bottom: 100px;
+
+  img {
+    float: left;
+    padding-right: 20px;
+    margin-bottom: 100px;
+  }
+  .client {
+    text-align: left;
+  }
+
+  .job {
+    color: $darkgrey;
+    &::after {
+      content: "";
+      background-color: $red;
+      width: 50px;
+      height: 3px;
+      display: block;
+      margin: 15px 0 15px 135px;
+    }
+  }
+
+  .grey {
+    font-family: 'robotoregular';
+    font-size: 12px;
+    text-align: justify;
+    color: $darkgrey;
+  }
+}
+
 //-----------------------(blog)-----------------------------
+.blog {
+  .container{
+    text-align: left;
+  }
+
+  .grey {
+    font-family: 'robotoregular';
+    padding-bottom: 10px;
+    border-bottom: 1px $lightgrey solid;
+    margin-bottom: 0;
+  }
+
+  .img-responsive {
+    margin: auto;
+  }
+
+  .calendar {
+    text-align: center;
+    background: $green;
+    color: white;
+    width: 80px;
+    padding: 15px;
+    margin-bottom: -80px;
+    transform: translate(-15px,-108px);
+
+    p {
+      margin: 0;
+      line-height: 1.2em;
+    }
+
+    .day {
+      font-family: 'montserratbold';
+      font-size: 40px;
+    }
+
+    .month {
+      font-family: 'robotoregular';
+      font-style: italic;
+      font-weight: 100;
+    }
+  }
+
+  .social {
+    img {
+      float: left;
+      padding-top: 3px;
+      padding-right: 10px;
+      margin-bottom: 0;
+    }
+    p {
+      font-family: 'robotoregular';
+      color: $grey;
+      font-style: italic;
+      font-weight: 100;
+      padding-right: 20px;
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .col-sm-4 {
+    margin-top: 40px;
+  }
+}
+
 //-----------------------(map)------------------------------
+.map {
+  background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url("images/map/map.jpg") top center;
+  padding-top: 50px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  a {
+    color: $red;
+    text-decoration: none;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
 //-----------------------(footer)---------------------------
+footer {
+  background-color: $almostwhite;
+  padding-top: 80px;
+
+  h2 {
+    font-family: 'montserratbold';
+    font-size: 36px;
+    color: #cccccc;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  .grey {
+    margin-bottom: 40px;
+  }
+
+  .followers {
+    font-family: 'montserratbold';
+    border-bottom: 1px $lightgrey solid;
+    padding: 10px;
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .follow {
+    font-style: italic;
+    font-weight: 100;
+    color: $grey;
+    float: left;
+    padding-top: 2px;
+    margin: 0;
+  }
+
+  .social_media {
+    margin-bottom: 30px;
+    a {
+      margin-left: 5px;
+    }
+  }
+
+  .img-responsive {
+    float: left;
+    margin-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .blogg {
+    margin-top: 20px;
+  }
+
+  .blog_link {
+    margin-bottom: 28px;
+    a {
+      color: black;
+      text-align: left;
+    }
+  }
+
+  .title {
+    min-height: 70px;
+    font-size: 12px;
+    padding-top: 0;
+  }
+
+  .date {
+    color: $grey;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 100;
+    margin-top: -20px;
+  }
+
+  .col-md-3 {
+    max-width: 264px;
+    margin: auto;
+  }
+
+  .author {
+    margin-bottom: 10px;
+  }
+
+  .more_photos {
+    font-family: 'robotoregular';
+    color: $grey;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 100;
+    padding-top: 15px;
+    text-align: left;
+  }
+}
+
+form {
+  padding-top: 20px;
+}
+
+input {
+  height: 40px;
+  width: 45%;
+  border: 1px $lightgrey solid;
+}
+
+button {
+  color: white;
+  background-color: $green;
+  border: none;
+  padding: 10px 30px;
+  margin-left: -5px;
+}
+
+::-webkit-input-placeholder {
+  font-family: 'robotoregular';
+  color: $lightgrey;
+  font-style: italic;
+  font-weight: 100;
+  padding-left: 10px;
+}
+
+.foot {
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+  border-top: 1px $lightgrey solid;
+  margin-top: 30px;
+
+  span {
+    font-family: arial;
+    color: $red;
+  }
+}
 
 //-----------------------responsive-------------------------
 //-----------------------BIGGER ON MOBILE-------------------
@@ -566,6 +809,21 @@ h3 {
       width: calc(100% - (100% - 480px));
     }
   }
+
+  .say {
+    img {
+      margin-bottom: 80px;
+    }
+    .grey {
+      padding-right: 20px;
+    }
+  }
+
+  .blog {
+    .calendar {
+      margin-left: calc(100% / 2 - 190px)
+    }
+  }
 }
 
 //-----------------------TABLETS----------------------------
@@ -583,6 +841,17 @@ h3 {
   .quote {
     img {
       display: initial;
+    }
+    .text {
+      margin-left: 200px;
+    }
+  }
+
+  .testimonial {
+    img {
+      display: initial;
+      width: 150px;
+      padding-top: 80px;
     }
     .text {
       margin-left: 200px;
@@ -652,6 +921,20 @@ h3 {
       height: 45px;
     }
   }
+
+  .testimonial {
+    padding-top: 50px;
+    img {
+      width: initial;
+      padding-top: 20px;
+    }
+  }
+
+  .blog {
+    .calendar {
+      margin-left: 0;
+    }
+  }
 }
 
 //-----------------------HI RES----------------------------
@@ -670,6 +953,12 @@ h3 {
     img {
       margin-top: 160px;
       height: initial;
+    }
+  }
+
+  footer {
+    .date {
+      margin-top: 0;
     }
   }
 }
@@ -696,6 +985,30 @@ h3 {
   .after {
     img {
       margin-top: 195px;
+    }
+  }
+
+  .say {
+    .grey {
+      padding-right: 80px;
+    }
+  }
+
+  .blog_link {
+    margin-bottom: 45px;
+  }
+
+  .title {
+    padding-top: 10px;
+  }
+
+  form {
+    padding-top: 0;
+  }
+
+  footer {
+    .date {
+      margin-top: -20px;
     }
   }
 }
