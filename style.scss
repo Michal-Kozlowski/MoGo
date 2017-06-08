@@ -40,7 +40,6 @@ $almostwhite: #f8f8f8;
 $darkgrey: #999999;
 
 //--------------------GLOBAL---------------------
-
 * {
   box-sizing: border-box;
 }
@@ -57,7 +56,6 @@ a {
 }
 
 //--------------------NAV-----------------------
-
  a.navbar-header {
    width: 100%;
  }
@@ -97,15 +95,51 @@ li {
   font-size: 24px;
 }
 
+.search {
+  display: none;
+  margin-top: 6px;
+  input {
+    width: 200px;
+  }
+  .glyphicon-remove {
+    color: $orange;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 //--------------------HEADER (banner)-----------------------
-header {
-  background-image: linear-gradient(rgba(243,129,129,0.9),rgba(252,227,138,0.9)), url("images/banner/vulture.jpg");
-  background-position: center top;
+.banner {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   color: white;
   width: 100%;
+}
+
+.slide1 {
+  background-image: linear-gradient(rgba(243,129,129,0.9),rgba(252,227,138,0.9)), url("images/banner/vulture.jpg");
+  background-position: center bottom;
+}
+
+.slide2 {
+  background-image: linear-gradient(rgba(243,129,129,0.8),rgba(252,227,138,0.8)), url("images/banner/bird2.jpg");
+  background-position: center bottom;
+}
+
+.slide3 {
+  background-image: linear-gradient(rgba(243,129,129,0.9),rgba(252,227,138,0.9)), url("images/banner/bird3.jpg");
+  background-position: bottom left;
+}
+
+.slide4 {
+  background-image: linear-gradient(rgba(243,129,129,0.8),rgba(252,227,138,0.8)), url("images/banner/bird4.jpg");
+  background-position: bottom right;
+}
+
+.slide_element {
+  display: none;
 }
 
 .welcome {
@@ -141,7 +175,27 @@ header {
   }
 
   .timer {
-    height: 200px;
+    height: 250px;
+    .row {
+      margin-top: 150px;
+    }
+    .time {
+      height: 3px;
+      width: 0%;
+      background: red;
+      margin-bottom: -3px;
+    }
+  }
+}
+
+.time_text {
+  text-align: left;
+  font-size: 10px;
+  padding-top: 10px;
+  border-top: 3px rgba(255,255,255,0.6) solid;
+  span {
+    font-size: 16px;
+    display: block;
   }
 }
 
@@ -300,6 +354,7 @@ h3 {
   .glyphicon {
     color: $grey;
     padding-top: 16px;
+    padding-right: 10px;
     font-size: 20px;
     font-weight: bold;
 
@@ -330,10 +385,13 @@ h3 {
   padding-bottom: 40px;
 
   img {
-    display: none;
     padding: 20px;
+    margin-left: 60px;
     border: 3px $green solid;
     float: left;
+  }
+  .carousel-inner>.item>img {
+    display: none;
   }
 
   .text {
@@ -364,19 +422,14 @@ h3 {
   .glyphicon {
     color: $grey;
     font-size: 20px;
-    padding-top: 40px;
+    padding-top: 0px;
     text-decoration: none;
   }
 }
 
-.glyphicon-chevron-left {
-  float: left;
-  padding-right: 30px;
-}
-
-.glyphicon-chevron-right {
-  float: right;
-  padding-left: 10px;
+#over, #over2, #over3, #over4 {
+  background: none;
+  width: 20px;
 }
 
 //-----------------------(our team)-------------------------
@@ -486,6 +539,7 @@ h3 {
 
   img {
     padding: 20px;
+    margin-left: 20px;
     display: none;
     float: left;
   }
@@ -520,8 +574,6 @@ h3 {
   .glyphicon {
     color: $grey;
     font-size: 20px;
-    padding-top: 110px;
-    text-decoration: none;
   }
 }
 
@@ -657,7 +709,7 @@ footer {
   }
 
   .grey {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .followers {
@@ -691,10 +743,6 @@ footer {
     padding-bottom: 20px;
   }
 
-  .blogg {
-    margin-top: 20px;
-  }
-
   .blog_link {
     margin-bottom: 28px;
     a {
@@ -705,7 +753,7 @@ footer {
 
   .title {
     min-height: 70px;
-    font-size: 12px;
+    font-size: 11px;
     padding-top: 0;
   }
 
@@ -720,6 +768,7 @@ footer {
   .col-md-3 {
     max-width: 264px;
     margin: auto;
+    padding-left: 0;
   }
 
   .author {
@@ -734,6 +783,10 @@ footer {
     font-weight: 100;
     padding-top: 15px;
     text-align: left;
+  }
+
+  .col-xs-4 {
+    max-width: 88px;
   }
 }
 
@@ -838,8 +891,16 @@ button {
     }
   }
 
+  .time_text {
+    font-size: 16px;
+    span {
+      font-size: 24px;
+      display: initial;
+    }
+  }
+
   .quote {
-    img {
+    .carousel-inner>.item>img {
       display: initial;
     }
     .text {

@@ -56,14 +56,41 @@ li a {
   font-family: 'montserratbold';
   font-size: 24px; }
 
-header {
-  background-image: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("images/banner/vulture.jpg");
-  background-position: center top;
+.search {
+  display: none;
+  margin-top: 6px; }
+  .search input {
+    width: 200px; }
+  .search .glyphicon-remove {
+    color: #fce38a; }
+    .search .glyphicon-remove:hover {
+      cursor: pointer; }
+
+.banner {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   color: white;
   width: 100%; }
+
+.slide1 {
+  background-image: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("images/banner/vulture.jpg");
+  background-position: center bottom; }
+
+.slide2 {
+  background-image: linear-gradient(rgba(243, 129, 129, 0.8), rgba(252, 227, 138, 0.8)), url("images/banner/bird2.jpg");
+  background-position: center bottom; }
+
+.slide3 {
+  background-image: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("images/banner/bird3.jpg");
+  background-position: bottom left; }
+
+.slide4 {
+  background-image: linear-gradient(rgba(243, 129, 129, 0.8), rgba(252, 227, 138, 0.8)), url("images/banner/bird4.jpg");
+  background-position: bottom right; }
+
+.slide_element {
+  display: none; }
 
 .welcome h2 {
   font-family: 'kaushan_scriptregular';
@@ -89,7 +116,23 @@ header {
     color: #fce38a;
     text-decoration: none; }
 .welcome .timer {
-  height: 200px; }
+  height: 250px; }
+  .welcome .timer .row {
+    margin-top: 150px; }
+  .welcome .timer .time {
+    height: 3px;
+    width: 0%;
+    background: red;
+    margin-bottom: -3px; }
+
+.time_text {
+  text-align: left;
+  font-size: 10px;
+  padding-top: 10px;
+  border-top: 3px rgba(255, 255, 255, 0.6) solid; }
+  .time_text span {
+    font-size: 16px;
+    display: block; }
 
 article {
   text-align: center;
@@ -203,6 +246,7 @@ h3 {
   .panel-group .glyphicon {
     color: #b3b3b3;
     padding-top: 16px;
+    padding-right: 10px;
     font-size: 20px;
     font-weight: bold; }
   .panel-group .panel-body {
@@ -223,10 +267,12 @@ h3 {
   padding-top: 50px;
   padding-bottom: 40px; }
   .quote img {
-    display: none;
     padding: 20px;
+    margin-left: 60px;
     border: 3px #95e1d3 solid;
     float: left; }
+  .quote .carousel-inner > .item > img {
+    display: none; }
   .quote .text {
     margin-left: 50px;
     margin-right: 50px; }
@@ -250,16 +296,12 @@ h3 {
   .quote .glyphicon {
     color: #b3b3b3;
     font-size: 20px;
-    padding-top: 40px;
+    padding-top: 0px;
     text-decoration: none; }
 
-.glyphicon-chevron-left {
-  float: left;
-  padding-right: 30px; }
-
-.glyphicon-chevron-right {
-  float: right;
-  padding-left: 10px; }
+#over, #over2, #over3, #over4 {
+  background: none;
+  width: 20px; }
 
 .our {
   font-family: 'robotoregular';
@@ -338,6 +380,7 @@ h3 {
   padding-bottom: 40px; }
   .testimonial img {
     padding: 20px;
+    margin-left: 20px;
     display: none;
     float: left; }
   .testimonial .text {
@@ -364,9 +407,7 @@ h3 {
         margin: 10px 10px 0 0; }
   .testimonial .glyphicon {
     color: #b3b3b3;
-    font-size: 20px;
-    padding-top: 110px;
-    text-decoration: none; }
+    font-size: 20px; }
 
 .say {
   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/what people say/tabolerone.jpg") top center;
@@ -459,7 +500,7 @@ footer {
     margin-bottom: 30px;
     margin-top: 0; }
   footer .grey {
-    margin-bottom: 40px; }
+    margin-bottom: 20px; }
   footer .followers {
     font-family: 'montserratbold';
     border-bottom: 1px #e5e5e5 solid;
@@ -481,8 +522,6 @@ footer {
     float: left;
     margin-right: 20px;
     padding-bottom: 20px; }
-  footer .blogg {
-    margin-top: 20px; }
   footer .blog_link {
     margin-bottom: 28px; }
     footer .blog_link a {
@@ -490,7 +529,7 @@ footer {
       text-align: left; }
   footer .title {
     min-height: 70px;
-    font-size: 12px;
+    font-size: 11px;
     padding-top: 0; }
   footer .date {
     color: #b3b3b3;
@@ -500,7 +539,8 @@ footer {
     margin-top: -20px; }
   footer .col-md-3 {
     max-width: 264px;
-    margin: auto; }
+    margin: auto;
+    padding-left: 0; }
   footer .author {
     margin-bottom: 10px; }
   footer .more_photos {
@@ -511,6 +551,8 @@ footer {
     font-weight: 100;
     padding-top: 15px;
     text-align: left; }
+  footer .col-xs-4 {
+    max-width: 88px; }
 
 form {
   padding-top: 20px; }
@@ -578,7 +620,13 @@ button {
     font-size: 60px;
     max-width: 400px; }
 
-  .quote img {
+  .time_text {
+    font-size: 16px; }
+    .time_text span {
+      font-size: 24px;
+      display: initial; }
+
+  .quote .carousel-inner > .item > img {
     display: initial; }
   .quote .text {
     margin-left: 200px; }
