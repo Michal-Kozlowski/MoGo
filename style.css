@@ -93,22 +93,24 @@ li a {
 .slide_element {
   display: none; }
 
-.welcome h2 {
+h2 {
   font-family: 'kaushan_scriptregular';
   font-size: 16px;
   margin-top: 15px; }
-.welcome h1 {
+
+h1 {
   font-family: 'montserratbold';
   font-size: 40px;
   max-width: 280px;
   margin: auto; }
-  .welcome h1::after {
+  h1::after {
     content: "";
     background-color: white;
     width: 50px;
     height: 3px;
     display: block;
     margin: 10px auto 40px; }
+
 .welcome a {
   border: white solid 3px;
   padding: 10px 30px; }
@@ -122,7 +124,7 @@ li a {
     margin-top: 150px; }
   .welcome .timer .time {
     height: 3px;
-    width: 0%;
+    width: 0;
     background: red;
     margin-bottom: -3px; }
 
@@ -130,6 +132,7 @@ li a {
   text-align: left;
   font-size: 10px;
   padding-top: 10px;
+  border-color: white;
   border-top: 3px rgba(255, 255, 255, 0.6) solid; }
   .time_text span {
     font-size: 16px;
@@ -297,7 +300,7 @@ h3 {
   .quote .glyphicon {
     color: #b3b3b3;
     font-size: 20px;
-    padding-top: 0px;
+    padding-top: 0;
     text-decoration: none; }
 
 #over, #over2, #over3, #over4 {
@@ -411,7 +414,7 @@ h3 {
     font-size: 20px; }
 
 .say {
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/what people say/tabolerone.jpg") top center;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/what_people_say/tabolerone.jpg") top center;
   padding-top: 70px;
   padding-bottom: 70px;
   margin-top: 0;
@@ -588,9 +591,10 @@ button {
     color: #f38181; }
 
 @media only screen and (min-width: 430px) {
-  .welcome h2 {
+  h2 {
     font-size: 24px; }
-  .welcome h1 {
+
+  h1 {
     font-size: 50px;
     max-width: 340px; }
 
@@ -598,7 +602,7 @@ button {
     left: calc((100% - 380px) /2);
     width: calc(100% - (100% - 380px)); }
   .image-container:hover .after {
-    box-shadow: 10px 10px 0px #95e1d3; }
+    box-shadow: 10px 10px 0 #95e1d3; }
   .image-container:hover {
     transform: translate(-10px, -10px);
     transition: 0.1s; }
@@ -615,9 +619,10 @@ button {
   .blog .calendar {
     margin-left: calc(100% / 2 - 190px); } }
 @media only screen and (min-width: 600px) {
-  .welcome h2 {
+  h2 {
     font-size: 30px; }
-  .welcome h1 {
+
+  h1 {
     font-size: 60px;
     max-width: 400px; }
 
@@ -639,9 +644,10 @@ button {
   .testimonial .text {
     margin-left: 200px; } }
 @media only screen and (min-width: 768px) {
-  .welcome h2 {
+  h2 {
     font-size: 40px; }
-  .welcome h1 {
+
+  h1 {
     font-size: 100px;
     max-width: 600px; }
 
@@ -670,7 +676,7 @@ button {
   .facts .fact {
     float: left;
     width: 20%;
-    border-top: 0px; }
+    border-top: 0; }
     .facts .fact:not(:first-child) {
       border-left: 1px white solid; }
 
@@ -693,10 +699,11 @@ button {
   form {
     padding-top: 0; } }
 @media only screen and (min-width: 992px) {
-  .welcome h2 {
+  h2 {
     font-size: 60px;
     margin-top: 40px; }
-  .welcome h1 {
+
+  h1 {
     font-size: 120px;
     max-width: 600px; }
 
@@ -707,10 +714,11 @@ button {
   footer .date {
     margin-top: 0; } }
 @media only screen and (min-width: 1200px) {
-  .welcome h2 {
+  h2 {
     font-size: 80px;
     margin-top: 80px; }
-  .welcome h1 {
+
+  h1 {
     font-size: 140px;
     max-width: 800px; }
 

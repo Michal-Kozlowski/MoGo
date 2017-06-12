@@ -143,28 +143,28 @@ li {
   display: none;
 }
 
+h2 {
+  font-family: 'kaushan_scriptregular';
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+h1 {
+  font-family: 'montserratbold';
+  font-size: 40px;
+  max-width: 280px;
+  margin: auto;
+  &::after {
+    content: "";
+    background-color: white;
+    width: 50px;
+    height: 3px;
+    display: block;
+    margin: 10px auto 40px;
+  }
+}
+
 .welcome {
-  h2 {
-    font-family: 'kaushan_scriptregular';
-    font-size: 16px;
-    margin-top: 15px;
-  }
-
-  h1 {
-    font-family: 'montserratbold';
-    font-size: 40px;
-    max-width: 280px;
-    margin: auto;
-    &::after {
-      content: "";
-      background-color: white;
-      width: 50px;
-      height: 3px;
-      display: block;
-      margin: 10px auto 40px;
-    }
-  }
-
   a {
     border: white solid 3px;
     padding: 10px 30px;
@@ -182,7 +182,7 @@ li {
     }
     .time {
       height: 3px;
-      width: 0%;
+      width: 0;
       background: red;
       margin-bottom: -3px;
     }
@@ -193,6 +193,7 @@ li {
   text-align: left;
   font-size: 10px;
   padding-top: 10px;
+  border-color: white;
   border-top: 3px rgba(255,255,255,0.6) solid;
   span {
     font-size: 16px;
@@ -423,7 +424,7 @@ h3 {
   .glyphicon {
     color: $grey;
     font-size: 20px;
-    padding-top: 0px;
+    padding-top: 0;
     text-decoration: none;
   }
 }
@@ -580,7 +581,7 @@ h3 {
 
 //-----------------------(what people say)------------------
 .say {
-  background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url("images/what people say/tabolerone.jpg") top center;
+  background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url("images/what_people_say/tabolerone.jpg") top center;
   padding-top: 70px;
   padding-bottom: 70px;
   margin-top: 0;
@@ -833,14 +834,12 @@ button {
 //-----------------------responsive-------------------------
 //-----------------------BIGGER ON MOBILE-------------------
 @media only screen and (min-width: 430px) {
-  .welcome {
-    h2 {
-      font-size: 24px;
-    }
-    h1 {
-      font-size: 50px;
-      max-width: 340px;
-    }
+  h2 {
+    font-size: 24px;
+  }
+  h1 {
+    font-size: 50px;
+    max-width: 340px;
   }
 
   .image-container {
@@ -849,7 +848,7 @@ button {
       width: calc(100% - (100% - 380px));
     }
     &:hover .after{
-      box-shadow: 10px 10px 0px $green;
+      box-shadow: 10px 10px 0 $green;
     }
     &:hover {
       transform: translate(-10px, -10px);
@@ -882,14 +881,12 @@ button {
 
 //-----------------------TABLETS----------------------------
 @media only screen and (min-width: 600px) {
-  .welcome {
-    h2 {
-      font-size: 30px;
-    }
-    h1 {
-      font-size: 60px;
-      max-width: 400px;
-    }
+  h2 {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 60px;
+    max-width: 400px;
   }
 
   .time_text {
@@ -923,14 +920,12 @@ button {
 
 //-----------------------DESKTOP----------------------------
 @media only screen and (min-width: 768px) {
-  .welcome {
-    h2 {
-      font-size: 40px;
-    }
-    h1 {
-      font-size: 100px;
-      max-width: 600px;
-    }
+  h2 {
+    font-size: 40px;
+  }
+  h1 {
+    font-size: 100px;
+    max-width: 600px;
   }
 
   li a {
@@ -966,7 +961,7 @@ button {
     .fact {
       float: left;
       width: 20%;
-      border-top: 0px;
+      border-top: 0;
       &:not(:first-child) {
         border-left: 1px white solid;
       }
@@ -1005,16 +1000,15 @@ button {
 
 //-----------------------HI RES----------------------------
 @media only screen and (min-width: 992px) {
-  .welcome {
-    h2 {
-      font-size: 60px;
-      margin-top: 40px;
-    }
-    h1 {
-      font-size: 120px;
-      max-width: 600px;
-    }
+  h2 {
+    font-size: 60px;
+    margin-top: 40px;
   }
+  h1 {
+    font-size: 120px;
+    max-width: 600px;
+  }
+
   .after {
     img {
       margin-top: 160px;
@@ -1031,15 +1025,13 @@ button {
 
 //-----------------------HIGHEST RESOLUTION-----------------
 @media only screen and (min-width: 1200px) {
-  .welcome {
-    h2 {
-      font-size: 80px;
-      margin-top: 80px;
-    }
-    h1 {
-      font-size: 140px;
-      max-width: 800px;
-    }
+  h2 {
+    font-size: 80px;
+    margin-top: 80px;
+  }
+  h1 {
+    font-size: 140px;
+    max-width: 800px;
   }
 
   .panel-group {
