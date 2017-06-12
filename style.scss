@@ -99,7 +99,8 @@ li {
   display: none;
   margin-top: 6px;
   input {
-    width: 200px;
+    width: 150px;
+    color: black;
   }
   .glyphicon-remove {
     color: $orange;
@@ -798,6 +799,7 @@ input {
   height: 40px;
   width: 45%;
   border: 1px $lightgrey solid;
+  padding-left: 15px;
 }
 
 button {
@@ -813,7 +815,6 @@ button {
   color: $lightgrey;
   font-style: italic;
   font-weight: 100;
-  padding-left: 10px;
 }
 
 .foot {
@@ -996,6 +997,10 @@ button {
       margin-left: 0;
     }
   }
+
+  form {
+    padding-top: 0;
+  }
 }
 
 //-----------------------HI RES----------------------------
@@ -1061,10 +1066,6 @@ button {
 
   .title {
     padding-top: 10px;
-  }
-
-  form {
-    padding-top: 0;
   }
 
   footer {

@@ -60,7 +60,8 @@ li a {
   display: none;
   margin-top: 6px; }
   .search input {
-    width: 200px; }
+    width: 150px;
+    color: black; }
   .search .glyphicon-remove {
     color: #fce38a; }
     .search .glyphicon-remove:hover {
@@ -560,7 +561,8 @@ form {
 input {
   height: 40px;
   width: 45%;
-  border: 1px #e5e5e5 solid; }
+  border: 1px #e5e5e5 solid;
+  padding-left: 15px; }
 
 button {
   color: white;
@@ -573,8 +575,7 @@ button {
   font-family: 'robotoregular';
   color: #e5e5e5;
   font-style: italic;
-  font-weight: 100;
-  padding-left: 10px; }
+  font-weight: 100; }
 
 .foot {
   font-size: 13px;
@@ -687,7 +688,10 @@ button {
       padding-top: 20px; }
 
   .blog .calendar {
-    margin-left: 0; } }
+    margin-left: 0; }
+
+  form {
+    padding-top: 0; } }
 @media only screen and (min-width: 992px) {
   .welcome h2 {
     font-size: 60px;
@@ -724,9 +728,6 @@ button {
 
   .title {
     padding-top: 10px; }
-
-  form {
-    padding-top: 0; }
 
   footer .date {
     margin-top: -20px; } }
